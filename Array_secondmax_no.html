@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>2nd Max Number</title>
+</head>
+<body>
+<script type="text/javascript">
+	/*
+	// Maximum Number in Array
+	var a=[40,10,20,30,60];
+	var max=a[0];
+	for(i=0;i<a.length;i++)
+	{
+		if(a[i]>max)
+		max=a[i];    
+    }
+document.write(max);
+*/
+
+
+// Second Maximum Number in Array
+var a=[40,10,20,30,60];
+	var max=0;
+	smax=0;
+	for(i=0;i<a.length;i++)
+	{
+		if(a[i]>max)
+		{
+		 smax=max;
+		 max=a[i];
+		}
+		else if(smax<a[i])
+		{
+			smax=a[i];
+		} 
+    }
+document.write("Maximum Number is"+max+"<br>"+"Second Maximum Number is"+smax);
+
+//Prime Number in Array 2, 3, 9, 11, 15, 23, 31,32, 37, 95, 97, 101, 103, 105, 113, 127, 131
+/*
+var a=[2,3,9,6,10,11,15,23,31,32,37,95,97,101,103,105,113,127,131];
+b=[];
+d=[];
+k=0;
+l=0;
+for(i=0;i<a.length;i++)
+	{
+	c=0;
+
+	for(j=2;j<a[i]/2;j++)
+	{
+	if(a[i]%j==0)
+	{
+		
+		c++;
+	}
+    }
+	if(c==0)
+	{
+		//document.write(a[i]+"<br>");
+		b[k]=a[i];
+		k++;
+	}
+	else
+	{
+		//document.write("Not prime "+a[i]+"<br>");
+		d[l]=a[i];
+		l++;
+	}
+}
+document.write("prime number"+"<br>");
+for(var i=0; i<k;i++)
+{
+	document.write(b[i]+"<br>");
+}
+document.write("Not prime number"+"<br>");
+for(var i=0; i<l;i++)
+{
+	document.write(d[i]+"<br>");
+}
+*/
+
+</script>
+</body>
+</html>
